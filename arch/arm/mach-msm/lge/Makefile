@@ -1,5 +1,6 @@
 obj-$(CONFIG_MACH_LGE) += devices_lge.o
 
+obj-$(CONFIG_MACH_MSM8926_X5_SPR) += board-8926-x5-spr.o board-8926-x5-spr-gpiomux.o
 obj-$(CONFIG_MACH_MSM8226_W7DS_OPEN_CIS) += board-8226-w7ds-open-cis.o board-8226-w7ds-open-cis-gpiomux.o
 
 obj-$(CONFIG_LGE_BOOTLOADER_LOG) += lge_bootloader_log.o
