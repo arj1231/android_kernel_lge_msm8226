@@ -3,12 +3,35 @@ config MACH_LGE
 
 menu "LGE Board Selection"
 
-config MACH_MSM8226_W7DS_OPEN_CIS
+config MACH_MSM8926_X5_SPR
         depends on ARCH_MSM8226
         select MACH_LGE
-        bool "MSM8226 W7DS OPEN CIS"
+        bool "MSM8926 X5 SPR"
         help
-          Support for the Qualcomm MSM8226 W7 Dual Sim Open device.
+          Support for the Qualcomm MSM8926 X5 SPR device.
+
+config MACH_MSM8926_G2M_GLOBAL
+    depends on ARCH_MSM8226
+    select MACH_LGE
+    bool "MSM8926 G2M GLOBAL"
+    help
+      Support for the Qualcomm MSM8926 G2M GLOBAL device.
+
+config MACH_MSM8226_G2MDS_GLOBAL
+    depends on ARCH_MSM8226
+    select MACH_LGE
+    bool "MSM8226 G2MDS GLOBAL"
+    help
+      Support for the Qualcomm MSM8226 G2MDS GLOBAL device.
+
+config LCD_LGIT_VIDEO_WXGA
+	depends on ARCH_MSM8226
+	select MACH_LGE
+	bool "WXGA"
+	default n
+	help
+	  Support for the WXGA device.
+
 endmenu
 
 menu "LGE Specific Patches"
@@ -100,6 +123,17 @@ config LGE_PM_BATTERY_CAPACITY_3000mAh
 	depends on LGE_PM_BATTERY_PROFILE_DATA
 	help
 	  LGE battery capacity for 3000mAh
+
+config LGE_PM_BATTERY_CAPACITY_3200mAh
+	bool "Support Battery Capacity"
+	depends on LGE_PM_BATTERY_PROFILE_DATA
+	help
+	  LGE battery capacity for 3200mAh
+config LGE_PM_BATTERY_CAPACITY_4600mAh
+	bool "Support Battery Capacity"
+	depends on LGE_PM_BATTERY_PROFILE_DATA
+	help
+	  LGE battery capacity for 4600mAh
 
 config LGE_CRASH_FOOTPRINT
 	boolean "Crash footprint for MLT"
